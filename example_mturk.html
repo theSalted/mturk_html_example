@@ -1,45 +1,32 @@
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
 
 <crowd-form>
-	<h2>Please annotation hair on top of the head and bangs:</h2>
+	<h2>Please answer following questions about the person's nose:</h2>
 	<img src="${image_url}" max-width="50%" height=50%/>
-	<h3>Length</h3>
+	<h3>Is the nose a prominent feature of this person?</h3>
 	<crowd-radio-group>
-		<crowd-radio-button name="top-and-front-length-no-hair" value="no-hair">No Hair</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-length-bald" value="bald">High hairline (Bald)</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-length-crew-cut" value="crew-cut">Crew Cut</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-length-short-hair" value="short-hair">Short Hair</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-length-medium-hair" value="medium-hair">Medium Hair</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-length-long-hair" value="long-hair">Long Hair</crowd-radio-button>
+		<crowd-radio-button name="[prominence][significant]" value="significant">Yes</crowd-radio-button>
+		<crowd-radio-button name="[prominence][non-significant]" value="non-significant">No</crowd-radio-button>
 	</crowd-radio-group>
-	<h3>Direction</h3>
+	<h3>How tall is this person's nose?</h3>
 	<crowd-radio-group>
-		<crowd-radio-button name="top-and-front-direction-straight-downward" value="straight-downward">Straight Downward</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-direction-decline-downward" value="decline-downward">Decline Downward</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-direction-incline-upward" value="incline-upward">Incline Upward</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-direction-horizonta" value="horizonta">Horizontal Left or Right</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-direction-central-parting" value="central-parting">Central Parting</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-direction-side-parting" value="side-parting">Side Parting</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-direction-upward" value="upward">Upward</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-direction-backward" value="backward">Backward</crowd-radio-button>
+		<crowd-radio-button name="[length][short]" value="short">Short</crowd-radio-button>
+		<crowd-radio-button name="[length][medium]" value="medium">Medium</crowd-radio-button>
+		<crowd-radio-button name="[length][tall]" value="tall">Tall</crowd-radio-button>
 	</crowd-radio-group>
-	<h3>Curl Level</h3>
+	<h3>How wide is this person's nose?</h3>
 	<crowd-radio-group>
-		<crowd-radio-button name="top-and-front-curl-straight" value="straight">Straight</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-curl-wavie" value="wavie">Wavie</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-curl-curly" value="curly">Curly</crowd-radio-button>
-		<crowd-radio-button name="top-and-front-curl-coiled" value="coiled">Coiled</crowd-radio-button>
+		<crowd-radio-group>
+		<crowd-radio-button name="[width][narrow]" value="narrow">Narrow</crowd-radio-button>
+		<crowd-radio-button name="[width][medium]" value="medium">Medium</crowd-radio-button>
+		<crowd-radio-button name="[width][wide]" value="wide">Wide</crowd-radio-button>
 	</crowd-radio-group>
-	<full-instructions header="Classification Instructions">
-	  <p>Read the task carefully and inspect the image.</p>
-	  <p>Choose the appropriate label that best suits the image.</p>
-	</full-instructions>
-	<short-instructions>
-	  <p>Read the task carefully and inspect the image.</p>
-	  <p>Choose the appropriate label that best suits the image.</p>
-	  <crowd-button>
-		<iron-icon icon="question-answer"/>
-	  </crowd-button>
-	</short-instructions>
-  </crowd-image-classifier>
+	</crowd-radio-group>
+	<h3>How pointy is this person's nose?</h3>
+	<crowd-radio-group>
+		<crowd-radio-button name="[pointiness][pointy]" value="straight">pointy</crowd-radio-button>
+		<crowd-radio-button name="[pointiness][flat]" value="straight">flat</crowd-radio-button>
+	</crowd-radio-group>
+	<br>
+	<br>
 </crowd-form>
